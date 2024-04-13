@@ -7461,6 +7461,29 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 815812467}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &828370622 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3222893402033483434, guid: c47ef35ce7f747149a19983fecd0077d, type: 3}
+  m_PrefabInstance: {fileID: 1394831342}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &828370628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 828370622}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 3
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 3
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!4 &831573636 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1983402640172779399, guid: 58f3528980eb0c3428596de4c8b29862, type: 3}
@@ -10158,6 +10181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Camera: {fileID: 963194227}
   CameraGO: {fileID: 705507993}
+  previousInducedGO: {fileID: 0}
 --- !u!1001 &1075839406
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14625,7 +14649,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3222893402033483434, guid: c47ef35ce7f747149a19983fecd0077d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 828370628}
   m_SourcePrefab: {fileID: 100100000, guid: c47ef35ce7f747149a19983fecd0077d, type: 3}
 --- !u!1 &1413140060
 GameObject:
