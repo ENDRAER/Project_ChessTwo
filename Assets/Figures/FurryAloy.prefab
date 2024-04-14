@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7993a960865ae18409cedcdf7ce7a4c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ActionMenuGO: {fileID: 3477855699344731081}
+  actionMenuGO: {fileID: 3477855699344731081}
 --- !u!135 &5359601032831845741
 SphereCollider:
   m_ObjectHideFlags: 0
