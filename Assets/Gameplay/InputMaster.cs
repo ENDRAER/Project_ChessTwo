@@ -7,10 +7,11 @@ using UnityEngine.InputSystem;
 
 public class InputMaster : MonoBehaviour
 {
-    public Camera Camera;
-    public GameObject CameraGO;
-    public InputManager _inputManager;
-    public Transform previousInducedGO;
+    [SerializeField] public Camera Camera;
+    [SerializeField] public GameObject CameraGO;
+    [SerializeField] public MatchController _matchController;
+    [NonSerialized] public InputManager _inputManager;
+    [SerializeField] public Transform previousInduced;
 
 
     private void Awake()
@@ -27,23 +28,25 @@ public class InputMaster : MonoBehaviour
     private void Update()
     {
         Physics.Raycast(Camera.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, 50);
-        if (hit.transform != null && hit.transform.tag == ("Interactable"))
+        if (hit.transform != null && hit.transform != previousInduced)
         {
-            if(previousInducedGO != null)
-                previousInducedGO.GetComponent<Outline>().enabled = false;
+            if (previousInduced != null)
+                previousInduced.GetComponent<Outline>().enabled = false;
             hit.transform.GetComponent<Outline>().enabled = true;
-            previousInducedGO = hit.transform;
+            previousInduced = hit.transform;
         }
-        else if (previousInducedGO != null)
+        else if (hit.transform == null && hit.transform != previousInduced)
         {
-            previousInducedGO.GetComponent<Outline>().enabled = false;
-            previousInducedGO = null;
+            if (previousInduced != null)
+                previousInduced.GetComponent<Outline>().enabled = false;
+            previousInduced = null;
         }
     }
 
     public void StartInteracting(InputAction.CallbackContext cbContext)
     {
-        if (Physics.Raycast(Camera.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, 50) && hit.transform.tag == ("Interactable"))
+        Physics.Raycast(Camera.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, 50);
+        if (hit.transform != null)
         {
             hit.transform.GetComponent<InteracrScript>().Interacting();
         }

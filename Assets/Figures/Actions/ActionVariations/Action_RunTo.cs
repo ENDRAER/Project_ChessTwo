@@ -4,22 +4,26 @@ using UnityEngine;
 
 public class Action_RunTo : Action
 {
-    public HexagonGrid _hexagonGrid;
-    public MatchController _matchController;
-
-    private void Awake()
-    {
-        _hexagonGrid = HexagonGrid.StaticHexagonGrid;
-        _matchController = MatchController.StaticMatchController;
-    }
-
     public override void TakeAction()
     {
-        foreach (CellParameters penis in _hexagonGrid.cells)
+        _matchController.selectedFigure = transform.GetComponentInParent<FigureScript>();
+        _matchController.CurentState = MatchController.States.cellChoisechising;
+        highlightCells();
+    }
+
+    public override void highlightCells()
+    {
+        foreach (CellParameters CellCP in _hexagonGrid.cells)
         {
-            if (penis != null)
+            if (CellCP != null)
             {
-                penis.transform.localScale = Vector3.zero;
+                float distanceFromCell = Vector3.Distance(CellCP.transform.position, transform.parent.parent.parent.position);
+                if (distanceFromCell < 1.7f && distanceFromCell >= 0.8f)
+                {
+                    Outline cellOutline = CellCP.GetComponent<Outline>();
+                    cellOutline.enabled = true;
+                    cellOutline.OutlineColor = Color.green;
+                }
             }
         }
     }
