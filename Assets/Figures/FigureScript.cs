@@ -6,6 +6,7 @@ using UnityEngine;
 public class FigureScript : InteracrScript
 {
     public GameObject actionMenuGO;
+    public GameObject pointerGO;
 
 
     public override void Interacting()

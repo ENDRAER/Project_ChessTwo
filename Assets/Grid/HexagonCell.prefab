@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3082273050222516271}
   - component: {fileID: 1264236378683065039}
   - component: {fileID: 4138616850869799310}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: HexagonCell
   m_TagString: Hexagon
   m_Icon: {fileID: 0}

@@ -11,7 +11,7 @@ public class InputMaster : MonoBehaviour
     [SerializeField] public GameObject CameraGO;
     [SerializeField] public MatchController _matchController;
     [NonSerialized] public InputManager _inputManager;
-    [SerializeField] public Transform previousInduced;
+    [SerializeField] public Transform previousTarget;
 
 
     private void Awake()
@@ -28,25 +28,38 @@ public class InputMaster : MonoBehaviour
     private void Update()
     {
         Physics.Raycast(Camera.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, 50);
-        if (hit.transform != null && hit.transform != previousInduced)
+        if (hit.transform != null && hit.transform != previousTarget)
         {
-            if (previousInduced != null)
-                previousInduced.GetComponent<Outline>().enabled = false;
-            hit.transform.GetComponent<Outline>().enabled = true;
-            previousInduced = hit.transform;
-        }
-        else if (hit.transform == null && hit.transform != previousInduced)
+            if (_matchController.selectedAction == null)
+            {
+                if (previousTarget != null)
+                    previousTarget.GetComponent<Outline>().enabled = false;
+                if (hit.transform.gameObject.layer == 3 && hit.transform.tag != "Hexagon")
+                {
+                    hit.transform.GetComponent<Outline>().enabled = true;
+                    previousTarget = hit.transform;
+                }
+            }
+            else
+                _matchController.selectedAction.CustomActionCursourOnBehaviour(hit.transform, previousTarget);
+        } // on cursour target GO
+        else if (hit.transform != null && hit.transform != previousTarget)
         {
-            if (previousInduced != null)
-                previousInduced.GetComponent<Outline>().enabled = false;
-            previousInduced = null;
-        }
+            if (_matchController.selectedAction == null)
+            {
+                if (previousTarget != null)
+                    previousTarget.GetComponent<Outline>().enabled = false;
+                previousTarget = null;
+            }
+            else
+                _matchController.selectedAction.CustomActionCursourOnBehaviour(hit.transform, previousTarget);
+        } // on cursour untarget GO
     }
 
     public void StartInteracting(InputAction.CallbackContext cbContext)
     {
         Physics.Raycast(Camera.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, 50);
-        if (hit.transform != null)
+        if (hit.transform != null && hit.transform.gameObject.layer == 3)
         {
             hit.transform.GetComponent<InteracrScript>().Interacting();
         }
