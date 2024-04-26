@@ -8,7 +8,7 @@ public class CameraMoving : MonoBehaviour
 {
     [NonSerialized] private float sensitivity = 100f;
     [NonSerialized] private float cameraMaxAngle = 80f;
-    [NonSerialized] private float cameraMinAngle = 5f;
+    [NonSerialized] private float cameraMinAngle = 30f;
     // border
     [NonSerialized] private float borderSize = 5f; // border size reduces camera viewing angle
     [NonSerialized] private float backwardForceSensitivity = 60f;
