@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Action : MonoBehaviour
 {
+    public FigureScript m_figureScript;
     public HexagonGrid _hexagonGrid;
     public MatchController _matchController;
-    public FigureScript m_figureScript;
 
     private void Start()
     {
@@ -17,9 +17,15 @@ public class Action : MonoBehaviour
 
     public virtual void TakeAction()
     {
-        
+
     }
 
+    public virtual void highlightCells()
+    {
+
+    }
+
+    // CustomBehaviour
     public virtual void CustomActionCursourOnBehaviour(Transform target, Transform previousTarget)
     {
 
@@ -30,13 +36,8 @@ public class Action : MonoBehaviour
 
     }
 
-    public virtual void CustomActionInteractionBehaviour(Transform target, Transform previousTarget)
+    public virtual void CustomActionInteractionBehaviour(Transform target)
     {
 
-    }
-
-    public virtual void highlightCells() 
-    {
-        
     }
 }

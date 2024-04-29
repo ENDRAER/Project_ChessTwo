@@ -61,7 +61,10 @@ public class InputMaster : MonoBehaviour
         Physics.Raycast(Camera.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, 50);
         if (hit.transform != null && hit.transform.gameObject.layer == 3)
         {
-            hit.transform.GetComponent<InteracrScript>().Interacting();
+            if(_matchController.selectedAction == null || hit.transform.tag != "Hexagon")
+                hit.transform.GetComponent<InteracrScript>().Interacting();
+            else if(_matchController.selectedAction != null)
+                _matchController.selectedAction.CustomActionInteractionBehaviour(hit.transform);
         }
     }
 }

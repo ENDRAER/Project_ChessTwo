@@ -27,25 +27,6 @@ public class Action_RunTo : Action
         highlightCells();
     }
 
-    public override void CustomActionCursourOnBehaviour(Transform target, Transform previousTarget)
-    {
-        if (target.tag == "Hexagon")
-        {
-            float distanceFromCell = Vector3.Distance(target.transform.position, transform.parent.parent.parent.position);
-            if (distanceFromCell < maxTravelDistance && distanceFromCell >= 0.8f)
-                pointerMeshRenderers[2].material.color = new Color(0.1f, 0.5f, 0.1f, pointerMeshRenderers[2].material.color.a);
-            else
-                pointerMeshRenderers[2].material.color = new Color(0.5f, 0.1f, 0.1f, pointerMeshRenderers[2].material.color.a);
-            m_figureScript.pointerGO.transform.DOKill();
-            m_figureScript.pointerGO.transform.DOMove(new Vector3(target.position.x, target.position.y + 0.5f, target.position.z), 0.2f);
-        }
-    }
-
-    public override void CustomActionInteractionBehaviour(Transform target, Transform previousTarget)
-    {
-
-    }
-
     public override void highlightCells()
     {
         foreach (CellParameters CellCP in _hexagonGrid.cells)
@@ -61,5 +42,25 @@ public class Action_RunTo : Action
                 }
             }
         }
+    }
+
+    // CustomBehaviour
+    public override void CustomActionCursourOnBehaviour(Transform target, Transform previousTarget)
+    {
+        if (target.tag == "Hexagon")
+        {
+            float distanceFromCell = Vector3.Distance(target.transform.position, transform.parent.parent.parent.position);
+            if (distanceFromCell < maxTravelDistance && distanceFromCell >= 0.8f)
+                pointerMeshRenderers[2].material.color = new Color(0.1f, 0.5f, 0.1f, pointerMeshRenderers[2].material.color.a);
+            else
+                pointerMeshRenderers[2].material.color = new Color(0.5f, 0.1f, 0.1f, pointerMeshRenderers[2].material.color.a);
+            m_figureScript.pointerGO.transform.DOKill();
+            m_figureScript.pointerGO.transform.DOMove(new Vector3(target.position.x, target.position.y + 0.5f, target.position.z), 0.1f);
+        }
+    }
+
+    public override void CustomActionInteractionBehaviour(Transform target)
+    {
+
     }
 }
