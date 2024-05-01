@@ -3,13 +3,14 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class Action_RunTo : Action
 {
     [NonSerialized] private float maxTravelDistance = 1.7f;
     [NonSerialized] private MeshRenderer[] pointerMeshRenderers = new MeshRenderer[3]; // 0 - buttom thing 1 - conus 2 - shadow
 
-    public override void TakeAction()
+    public override void Interacting()
     {
         _matchController.selectedAction = this;
         _matchController.CurentState = MatchController.States.cellChoisechising;
@@ -60,6 +61,12 @@ public class Action_RunTo : Action
     }
 
     public override void CustomActionInteractionBehaviour(Transform target)
+    {
+        m_figureScript.FigureModel.transform.DOLookAt(target.position, 0.3f, AxisConstraint.Y);
+        _matchController.selectedFigure = null;
+    }
+
+    public override void ActingOnTact()
     {
 
     }

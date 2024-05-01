@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Action : MonoBehaviour
+public class Action : InteracrScript
 {
     public FigureScript m_figureScript;
     public HexagonGrid _hexagonGrid;
@@ -15,7 +15,7 @@ public class Action : MonoBehaviour
         m_figureScript = transform.GetComponentInParent<FigureScript>();
     }
 
-    public virtual void TakeAction()
+    public override void Interacting()
     {
 
     }
@@ -37,6 +37,11 @@ public class Action : MonoBehaviour
     }
 
     public virtual void CustomActionInteractionBehaviour(Transform target)
+    {
+
+    }
+
+    public virtual void ActingOnTact()
     {
 
     }

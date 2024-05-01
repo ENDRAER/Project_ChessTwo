@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class FigureScript : InteracrScript
 {
+    public GameObject FigureModel;
     public GameObject actionMenuGO;
     public GameObject pointerGO;
 
