@@ -10,7 +10,6 @@ public class MatchController : MonoBehaviour
     [SerializeField] public enum States {defaultState, spectator, cellChoisechising }
     [NonSerialized] public States CurentState;
     [NonSerialized] public FigureScript[] FigureScripts;
-    [NonSerialized] public FigureScript selectedFigure;
     [NonSerialized] public Action selectedAction;
 
     private void Awake()

@@ -20,11 +20,6 @@ public class Action : InteracrScript
 
     }
 
-    public virtual void highlightCells()
-    {
-
-    }
-
     // CustomBehaviour
     public virtual void CustomActionCursourOnBehaviour(Transform target, Transform previousTarget)
     {
