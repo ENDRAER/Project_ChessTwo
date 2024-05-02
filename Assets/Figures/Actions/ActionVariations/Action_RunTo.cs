@@ -14,7 +14,6 @@ public class Action_RunTo : Action
     {
         _matchController.selectedAction = this;
         _matchController.CurentState = MatchController.States.cellChoisechising;
-        _matchController.selectedFigure = m_figureScript;
         m_figureScript.pointerGO.SetActive(true);
 
         pointerMeshRenderers[0] = m_figureScript.pointerGO.GetComponent<MeshRenderer>();
@@ -25,20 +24,20 @@ public class Action_RunTo : Action
         pointerMeshRenderers[1].material.DOFade(1, 1);
         pointerMeshRenderers[2].material.DOFade(0.3f, 1);
         pointerMeshRenderers[2].material.color = new Color(0.1f, 0.5f, 0.1f, pointerMeshRenderers[2].material.color.a);
-        highlightCells();
+        highlightCells(true);
     }
 
-    public override void highlightCells()
+    public void highlightCells(bool Mode)
     {
-        foreach (CellParameters CellCP in _hexagonGrid.cells)
+        foreach (CellParameters Cell in _hexagonGrid.cells)
         {
-            if (CellCP != null)
+            if (Cell != null)
             {
-                float distanceFromCell = Vector3.Distance(CellCP.transform.position, transform.parent.parent.parent.position);
+                float distanceFromCell = Vector3.Distance(Cell.transform.position, transform.parent.parent.parent.position);
                 if (distanceFromCell < maxTravelDistance && distanceFromCell >= 0.8f)
                 {
-                    Outline cellOutline = CellCP.GetComponent<Outline>();
-                    cellOutline.enabled = true;
+                    Outline cellOutline = Cell.GetComponent<Outline>();
+                    cellOutline.enabled = Mode;
                     cellOutline.OutlineColor = Color.green;
                 }
             }
@@ -62,8 +61,29 @@ public class Action_RunTo : Action
 
     public override void CustomActionInteractionBehaviour(Transform target)
     {
-        m_figureScript.FigureModel.transform.DOLookAt(target.position, 0.3f, AxisConstraint.Y);
-        _matchController.selectedFigure = null;
+        if (target.tag != "Hexagon")
+            return;
+        float distanceFromCell = Vector3.Distance(target.transform.position, transform.parent.parent.parent.position);
+        if (distanceFromCell < maxTravelDistance && distanceFromCell >= 0.8f)
+        {
+            m_figureScript.FigureModel.transform.DOLookAt(target.position, 0.3f, AxisConstraint.Y);
+            _matchController.selectedAction = null;
+            highlightCells(false);
+        }
+        else
+        {
+            pointerMeshRenderers[0].material.color = new Color(0.85f, 0, 0);
+            pointerMeshRenderers[0].material.DOColor(new Color(0.85f, 0, 0), 0.2f).OnComplete(() =>
+            {
+                pointerMeshRenderers[0].material.DOColor(new Color(0.85f, 0.85f, 0.85f), 0.5f);
+            });
+
+            pointerMeshRenderers[1].material.color = new Color(0.85f, 0, 0);
+            pointerMeshRenderers[1].material.DOColor(new Color(0.85f, 0, 0), 0.2f).OnComplete(() =>
+            {
+                pointerMeshRenderers[1].material.DOColor(new Color(0.85f, 0.85f, 0.85f), 0.5f);
+            });
+        }
     }
 
     public override void ActingOnTact()

@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Action : InteracrScript
 {
-    public FigureScript m_figureScript;
-    public HexagonGrid _hexagonGrid;
-    public MatchController _matchController;
+    [SerializeField] protected FigureScript m_figureScript;
+    [SerializeField] protected HexagonGrid _hexagonGrid;
+    [SerializeField] protected MatchController _matchController;
 
     private void Start()
     {

@@ -9,11 +9,20 @@ public class MatchController : MonoBehaviour
 
     [SerializeField] public enum States {defaultState, spectator, cellChoisechising }
     [NonSerialized] public States CurentState;
+    [NonSerialized] public FigureScript[] FigureScripts;
     [NonSerialized] public FigureScript selectedFigure;
-    [SerializeField] public Action selectedAction;
+    [NonSerialized] public Action selectedAction;
 
     private void Awake()
     {
         StaticMatchController = this;
+    }
+
+    public void StartNextTact()
+    {
+        foreach (var figure in FigureScripts)
+        {
+            figure.SelectedAction.ActingOnTact();
+        }
     }
 }

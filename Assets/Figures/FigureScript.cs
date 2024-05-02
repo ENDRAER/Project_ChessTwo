@@ -1,13 +1,15 @@
 using DG.Tweening;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class FigureScript : InteracrScript
 {
-    public GameObject FigureModel;
-    public GameObject actionMenuGO;
-    public GameObject pointerGO;
+    [SerializeField] public GameObject FigureModel;
+    [SerializeField] public GameObject actionMenuGO;
+    [SerializeField] public GameObject pointerGO;
+    [NonSerialized] public Action SelectedAction;
 
 
     public override void Interacting()
