@@ -67,6 +67,7 @@ public class Action_RunTo : Action
         if (distanceFromCell < maxTravelDistance && distanceFromCell >= 0.8f)
         {
             m_figureScript.FigureModel.transform.DOLookAt(target.position, 0.3f, AxisConstraint.Y);
+            m_figureScript.selectedAction = this;
             _matchController.selectedAction = null;
             highlightCells(false);
         }

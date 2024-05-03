@@ -9,7 +9,7 @@ public class FigureScript : InteracrScript
     [SerializeField] public GameObject FigureModel;
     [SerializeField] public GameObject actionMenuGO;
     [SerializeField] public GameObject pointerGO;
-    [NonSerialized] public Action SelectedAction;
+    [NonSerialized] public Action selectedAction;
 
 
     public override void Interacting()

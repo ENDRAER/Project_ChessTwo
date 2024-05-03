@@ -21,7 +21,7 @@ public class MatchController : MonoBehaviour
     {
         foreach (var figure in FigureScripts)
         {
-            figure.SelectedAction.ActingOnTact();
+            figure.selectedAction.ActingOnTact();
         }
     }
 }
