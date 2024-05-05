@@ -20,3 +20,4 @@ public class FigureScript : InteracrScript
             actionMenuGO.transform.DOScale(Vector3.zero, 0.1f);
     }
 }
+//if you are reading I pretend to be actively working
