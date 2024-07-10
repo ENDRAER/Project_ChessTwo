@@ -21,12 +21,7 @@ public class Action : InteracrScript
     }
 
     // CustomBehaviour
-    public virtual void CustomActionCursourOnBehaviour(Transform target, Transform previousTarget)
-    {
-
-    }
-
-    public virtual void CustomActionCursourOffBehaviour(Transform target, Transform previousTarget)
+    public virtual void CustomActionCursourBehaviour(Transform target, Transform previousTarget)
     {
 
     }

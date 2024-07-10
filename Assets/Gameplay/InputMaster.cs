@@ -28,32 +28,20 @@ public class InputMaster : MonoBehaviour
     private void Update()
     {
         Physics.Raycast(Camera.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, 50);
-        if (hit.transform != null && hit.transform != previousTarget)
+        Transform hitedTranform = hit.transform == null ? transform : hit.transform;
+        if (hitedTranform != previousTarget)
         {
             if (_matchController.selectedAction == null)
             {
-                if (previousTarget != null)
+                if (previousTarget.GetComponent<Outline>() != null)
                     previousTarget.GetComponent<Outline>().enabled = false;
-                if (hit.transform.gameObject.layer == 3 && hit.transform.tag != "Hexagon")
-                {
-                    hit.transform.GetComponent<Outline>().enabled = true;
-                    previousTarget = hit.transform;
-                }
+                if (hitedTranform.gameObject.layer == 3 && hitedTranform.tag != "Hexagon")
+                    hitedTranform.GetComponent<Outline>().enabled = true;
+                previousTarget = hitedTranform;
             }
             else
-                _matchController.selectedAction.CustomActionCursourOnBehaviour(hit.transform, previousTarget);
-        } // on cursour target GO
-        else if (hit.transform != null && hit.transform != previousTarget)
-        {
-            if (_matchController.selectedAction == null)
-            {
-                if (previousTarget != null)
-                    previousTarget.GetComponent<Outline>().enabled = false;
-                previousTarget = null;
-            }
-            else
-                _matchController.selectedAction.CustomActionCursourOnBehaviour(hit.transform, previousTarget);
-        } // on cursour untarget GO
+                _matchController.selectedAction.CustomActionCursourBehaviour(hitedTranform, previousTarget);
+        }
     }
 
     public void StartInteracting(InputAction.CallbackContext cbContext)

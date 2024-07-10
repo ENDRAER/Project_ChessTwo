@@ -12,6 +12,7 @@ public class Action_RunTo : Action
 
     public override void Interacting()
     {
+        m_figureScript.actionMenuGO.transform.DOScale(Vector3.zero, 0.1f);
         _matchController.selectedAction = this;
         _matchController.CurentState = MatchController.States.cellChoisechising;
         m_figureScript.pointerGO.SetActive(true);
@@ -29,23 +30,20 @@ public class Action_RunTo : Action
 
     public void highlightCells(bool Mode)
     {
-        foreach (CellParameters Cell in _hexagonGrid.cells)
+        Collider[] hitColliders = Physics.OverlapSphere(m_figureScript.transform.position, maxTravelDistance/2);
+        foreach (Collider collider in hitColliders)
         {
-            if (Cell != null)
+            if (collider.tag == "Hexagon")
             {
-                float distanceFromCell = Vector3.Distance(Cell.transform.position, transform.parent.parent.parent.position);
-                if (distanceFromCell < maxTravelDistance && distanceFromCell >= 0.8f)
-                {
-                    Outline cellOutline = Cell.GetComponent<Outline>();
-                    cellOutline.enabled = Mode;
-                    cellOutline.OutlineColor = Color.green;
-                }
+                Outline cellOutline = collider.GetComponent<Outline>();
+                cellOutline.enabled = Mode;
+                cellOutline.OutlineColor = Color.green;
             }
         }
     }
 
     // CustomBehaviour
-    public override void CustomActionCursourOnBehaviour(Transform target, Transform previousTarget)
+    public override void CustomActionCursourBehaviour(Transform target, Transform previousTarget)
     {
         if (target.tag == "Hexagon")
         {

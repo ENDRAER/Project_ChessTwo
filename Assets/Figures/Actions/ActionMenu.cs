@@ -12,6 +12,7 @@ public class ActionMenu : MonoBehaviour
     [NonSerialized] private GameObject CameraGO;
     [NonSerialized] private float roundingOfActionButtons = 6;
     [NonSerialized] private float spacingOfActionButtons = 70;
+    Vector3 ass = Vector3.one;
 
 
     private void Start()
@@ -43,6 +44,6 @@ public class ActionMenu : MonoBehaviour
 
     void Update()
     {
-        m_Canvas.transform.LookAt((-CameraGO.transform.position));
+        m_Canvas.transform.LookAt(-CameraGO.transform.position + m_Canvas.transform.position);
     }
 }

@@ -316,7 +316,6 @@ GameObject:
   - component: {fileID: 27260558}
   - component: {fileID: 27260561}
   - component: {fileID: 27260560}
-  - component: {fileID: 27260559}
   m_Layer: 0
   m_Name: Quad (11)
   m_TagString: Untagged
@@ -339,28 +338,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 728269832}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &27260559
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 27260557}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &27260560
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3146,7 +3123,6 @@ GameObject:
   - component: {fileID: 255503774}
   - component: {fileID: 255503777}
   - component: {fileID: 255503776}
-  - component: {fileID: 255503775}
   m_Layer: 0
   m_Name: Quad (31)
   m_TagString: Untagged
@@ -3169,28 +3145,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 728269832}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &255503775
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 255503773}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &255503776
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3822,7 +3776,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b552fa29c7656da4fac009f30ed05453, type: 2}
+  - {fileID: 2100000, guid: 0c74a15983507804d8655566e379d86e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4182,7 +4136,6 @@ GameObject:
   - component: {fileID: 357996578}
   - component: {fileID: 357996581}
   - component: {fileID: 357996580}
-  - component: {fileID: 357996579}
   m_Layer: 0
   m_Name: Quad (3)
   m_TagString: Untagged
@@ -4205,28 +4158,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 728269832}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &357996579
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 357996577}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &357996580
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4963,7 +4894,6 @@ GameObject:
   - component: {fileID: 396731963}
   - component: {fileID: 396731966}
   - component: {fileID: 396731965}
-  - component: {fileID: 396731964}
   m_Layer: 0
   m_Name: Quad (1)
   m_TagString: Untagged
@@ -4986,28 +4916,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 728269832}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &396731964
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 396731962}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &396731965
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5376,7 +5284,6 @@ GameObject:
   - component: {fileID: 440675561}
   - component: {fileID: 440675564}
   - component: {fileID: 440675563}
-  - component: {fileID: 440675562}
   m_Layer: 0
   m_Name: Quad (34)
   m_TagString: Untagged
@@ -5399,28 +5306,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 728269832}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &440675562
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 440675560}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &440675563
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6156,7 +6041,6 @@ GameObject:
   - component: {fileID: 509397982}
   - component: {fileID: 509397985}
   - component: {fileID: 509397984}
-  - component: {fileID: 509397983}
   m_Layer: 0
   m_Name: Quad (23)
   m_TagString: Untagged
@@ -6179,28 +6063,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 728269832}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &509397983
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 509397981}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &509397984
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8015,7 +7877,6 @@ GameObject:
   - component: {fileID: 678089699}
   - component: {fileID: 678089702}
   - component: {fileID: 678089701}
-  - component: {fileID: 678089700}
   m_Layer: 0
   m_Name: Quad (42)
   m_TagString: Untagged
@@ -8038,28 +7899,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 728269832}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &678089700
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 678089698}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &678089701
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8354,7 +8193,6 @@ GameObject:
   - component: {fileID: 687739551}
   - component: {fileID: 687739554}
   - component: {fileID: 687739553}
-  - component: {fileID: 687739552}
   m_Layer: 0
   m_Name: Quad (5)
   m_TagString: Untagged
@@ -8377,28 +8215,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 728269832}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &687739552
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 687739550}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &687739553
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8600,7 +8416,6 @@ GameObject:
   - component: {fileID: 692800003}
   - component: {fileID: 692800006}
   - component: {fileID: 692800005}
-  - component: {fileID: 692800004}
   m_Layer: 0
   m_Name: Quad (15)
   m_TagString: Untagged
@@ -8623,28 +8438,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 728269832}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &692800004
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 692800002}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &692800005
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9713,7 +9506,6 @@ GameObject:
   - component: {fileID: 750644043}
   - component: {fileID: 750644046}
   - component: {fileID: 750644045}
-  - component: {fileID: 750644044}
   m_Layer: 0
   m_Name: Quad (32)
   m_TagString: Untagged
@@ -9736,28 +9528,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 728269832}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &750644044
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 750644042}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &750644045
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9819,7 +9589,6 @@ GameObject:
   - component: {fileID: 755693600}
   - component: {fileID: 755693603}
   - component: {fileID: 755693602}
-  - component: {fileID: 755693601}
   m_Layer: 0
   m_Name: Quad (24)
   m_TagString: Untagged
@@ -9842,28 +9611,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 728269832}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &755693601
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 755693599}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &755693602
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11271,7 +11018,6 @@ GameObject:
   - component: {fileID: 898911799}
   - component: {fileID: 898911802}
   - component: {fileID: 898911801}
-  - component: {fileID: 898911800}
   m_Layer: 0
   m_Name: Quad (10)
   m_TagString: Untagged
@@ -11294,28 +11040,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 728269832}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &898911800
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 898911798}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &898911801
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12331,7 +12055,6 @@ GameObject:
   - component: {fileID: 996498666}
   - component: {fileID: 996498669}
   - component: {fileID: 996498668}
-  - component: {fileID: 996498667}
   m_Layer: 0
   m_Name: Quad (43)
   m_TagString: Untagged
@@ -12354,28 +12077,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 728269832}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &996498667
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 996498665}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &996498668
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13501,7 +13202,7 @@ MonoBehaviour:
   Camera: {fileID: 963194227}
   CameraGO: {fileID: 705507993}
   _matchController: {fileID: 1060970870}
-  previousTarget: {fileID: 0}
+  previousTarget: {fileID: 1060970867}
 --- !u!114 &1060970870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13987,7 +13688,6 @@ GameObject:
   - component: {fileID: 1090987662}
   - component: {fileID: 1090987665}
   - component: {fileID: 1090987664}
-  - component: {fileID: 1090987663}
   m_Layer: 0
   m_Name: Quad (35)
   m_TagString: Untagged
@@ -14010,28 +13710,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 728269832}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &1090987663
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1090987661}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1090987664
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14399,7 +14077,7 @@ GameObject:
   - component: {fileID: 1110344630}
   - component: {fileID: 1110344633}
   - component: {fileID: 1110344632}
-  - component: {fileID: 1110344631}
+  - component: {fileID: 1110344634}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -14417,33 +14095,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: -1.09, z: 0}
-  m_LocalScale: {x: 200, y: 200.00002, z: 1}
+  m_LocalScale: {x: 200, y: 200.00002, z: 200}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1287219844}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &1110344631
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1110344629}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1110344632
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14493,6 +14149,28 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1110344629}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!64 &1110344634
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110344629}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1111116867
 GameObject:
@@ -14764,7 +14442,6 @@ GameObject:
   - component: {fileID: 1128890455}
   - component: {fileID: 1128890458}
   - component: {fileID: 1128890457}
-  - component: {fileID: 1128890456}
   m_Layer: 0
   m_Name: Quad (41)
   m_TagString: Untagged
@@ -14787,28 +14464,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 728269832}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &1128890456
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1128890454}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1128890457
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15161,6 +14816,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1983402640172779399, guid: 58f3528980eb0c3428596de4c8b29862, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138616850869799310, guid: 58f3528980eb0c3428596de4c8b29862, type: 3}
+      propertyPath: outlineMode
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -16045,7 +15704,6 @@ GameObject:
   - component: {fileID: 1204303755}
   - component: {fileID: 1204303758}
   - component: {fileID: 1204303757}
-  - component: {fileID: 1204303756}
   m_Layer: 0
   m_Name: Quad (12)
   m_TagString: Untagged
@@ -16068,28 +15726,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 728269832}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &1204303756
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1204303754}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1204303757
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16151,7 +15787,6 @@ GameObject:
   - component: {fileID: 1207254337}
   - component: {fileID: 1207254340}
   - component: {fileID: 1207254339}
-  - component: {fileID: 1207254338}
   m_Layer: 0
   m_Name: Quad (21)
   m_TagString: Untagged
@@ -16174,28 +15809,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 728269832}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &1207254338
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1207254336}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1207254339
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16822,7 +16435,6 @@ GameObject:
   - component: {fileID: 1253047019}
   - component: {fileID: 1253047022}
   - component: {fileID: 1253047021}
-  - component: {fileID: 1253047020}
   m_Layer: 0
   m_Name: Quad (38)
   m_TagString: Untagged
@@ -16845,28 +16457,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 728269832}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &1253047020
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1253047018}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1253047021
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18947,7 +18537,6 @@ GameObject:
   - component: {fileID: 1382570959}
   - component: {fileID: 1382570962}
   - component: {fileID: 1382570961}
-  - component: {fileID: 1382570960}
   m_Layer: 0
   m_Name: Quad (20)
   m_TagString: Untagged
@@ -18970,28 +18559,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 728269832}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &1382570960
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1382570958}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1382570961
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19281,7 +18848,6 @@ GameObject:
   - component: {fileID: 1390021873}
   - component: {fileID: 1390021876}
   - component: {fileID: 1390021875}
-  - component: {fileID: 1390021874}
   m_Layer: 0
   m_Name: Quad (4)
   m_TagString: Untagged
@@ -19304,28 +18870,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 728269832}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &1390021874
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1390021872}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1390021875
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -19407,7 +18951,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6293840639497600553, guid: c47ef35ce7f747149a19983fecd0077d, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7071068
+      value: 0.62039524
       objectReference: {fileID: 0}
     - target: {fileID: 6293840639497600553, guid: c47ef35ce7f747149a19983fecd0077d, type: 3}
       propertyPath: m_LocalRotation.x
@@ -19415,7 +18959,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6293840639497600553, guid: c47ef35ce7f747149a19983fecd0077d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.7071068
+      value: 0.78428936
       objectReference: {fileID: 0}
     - target: {fileID: 6293840639497600553, guid: c47ef35ce7f747149a19983fecd0077d, type: 3}
       propertyPath: m_LocalRotation.z
@@ -19427,10 +18971,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6293840639497600553, guid: c47ef35ce7f747149a19983fecd0077d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
+      value: 103.31
       objectReference: {fileID: 0}
     - target: {fileID: 6293840639497600553, guid: c47ef35ce7f747149a19983fecd0077d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8754488640721653432, guid: c47ef35ce7f747149a19983fecd0077d, type: 3}
+      propertyPath: CameraGO
+      value: 
+      objectReference: {fileID: 963194225}
+    - target: {fileID: 9133305767194021094, guid: c47ef35ce7f747149a19983fecd0077d, type: 3}
+      propertyPath: outlineMode
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -20002,7 +19554,6 @@ GameObject:
   - component: {fileID: 1443477813}
   - component: {fileID: 1443477816}
   - component: {fileID: 1443477815}
-  - component: {fileID: 1443477814}
   m_Layer: 0
   m_Name: Quad (2)
   m_TagString: Untagged
@@ -20025,28 +19576,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 728269832}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &1443477814
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1443477812}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1443477815
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21605,7 +21134,6 @@ GameObject:
   - component: {fileID: 1583526540}
   - component: {fileID: 1583526543}
   - component: {fileID: 1583526542}
-  - component: {fileID: 1583526541}
   m_Layer: 0
   m_Name: Quad (44)
   m_TagString: Untagged
@@ -21628,28 +21156,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 728269832}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &1583526541
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1583526539}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1583526542
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22253,7 +21759,6 @@ GameObject:
   - component: {fileID: 1616375352}
   - component: {fileID: 1616375355}
   - component: {fileID: 1616375354}
-  - component: {fileID: 1616375353}
   m_Layer: 0
   m_Name: Quad (40)
   m_TagString: Untagged
@@ -22276,28 +21781,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 728269832}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &1616375353
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1616375351}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1616375354
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -22443,6 +21926,10 @@ PrefabInstance:
     - target: {fileID: 3222893402033483434, guid: c47ef35ce7f747149a19983fecd0077d, type: 3}
       propertyPath: m_Name
       value: FurryAloy (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222893402033483434, guid: c47ef35ce7f747149a19983fecd0077d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6293840639497600553, guid: c47ef35ce7f747149a19983fecd0077d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -22680,7 +22167,6 @@ GameObject:
   - component: {fileID: 1659425602}
   - component: {fileID: 1659425605}
   - component: {fileID: 1659425604}
-  - component: {fileID: 1659425603}
   m_Layer: 0
   m_Name: Quad (13)
   m_TagString: Untagged
@@ -22703,28 +22189,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 728269832}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &1659425603
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1659425601}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1659425604
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23029,7 +22493,6 @@ GameObject:
   - component: {fileID: 1675088890}
   - component: {fileID: 1675088893}
   - component: {fileID: 1675088892}
-  - component: {fileID: 1675088891}
   m_Layer: 0
   m_Name: Quad (14)
   m_TagString: Untagged
@@ -23052,28 +22515,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 728269832}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &1675088891
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1675088889}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1675088892
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23826,7 +23267,6 @@ GameObject:
   - component: {fileID: 1719545077}
   - component: {fileID: 1719545080}
   - component: {fileID: 1719545079}
-  - component: {fileID: 1719545078}
   m_Layer: 0
   m_Name: Quad (37)
   m_TagString: Untagged
@@ -23849,28 +23289,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 728269832}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &1719545078
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1719545076}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1719545079
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23989,7 +23407,6 @@ GameObject:
   - component: {fileID: 1721145159}
   - component: {fileID: 1721145162}
   - component: {fileID: 1721145161}
-  - component: {fileID: 1721145160}
   m_Layer: 0
   m_Name: Quad
   m_TagString: Untagged
@@ -24012,28 +23429,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 728269832}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &1721145160
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1721145158}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1721145161
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -25341,7 +24736,6 @@ GameObject:
   - component: {fileID: 1831642235}
   - component: {fileID: 1831642238}
   - component: {fileID: 1831642237}
-  - component: {fileID: 1831642236}
   m_Layer: 0
   m_Name: Quad (39)
   m_TagString: Untagged
@@ -25364,28 +24758,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 728269832}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &1831642236
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1831642234}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1831642237
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26048,7 +25420,6 @@ GameObject:
   - component: {fileID: 1861835302}
   - component: {fileID: 1861835305}
   - component: {fileID: 1861835304}
-  - component: {fileID: 1861835303}
   m_Layer: 0
   m_Name: Quad (22)
   m_TagString: Untagged
@@ -26071,28 +25442,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 728269832}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &1861835303
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1861835301}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1861835304
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -26855,7 +26204,6 @@ GameObject:
   - component: {fileID: 1921383732}
   - component: {fileID: 1921383735}
   - component: {fileID: 1921383734}
-  - component: {fileID: 1921383733}
   m_Layer: 0
   m_Name: Quad (36)
   m_TagString: Untagged
@@ -26878,28 +26226,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 728269832}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &1921383733
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1921383731}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1921383734
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27142,6 +26468,10 @@ PrefabInstance:
     - target: {fileID: 3222893402033483434, guid: c47ef35ce7f747149a19983fecd0077d, type: 3}
       propertyPath: m_Name
       value: FurryAloy (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3222893402033483434, guid: c47ef35ce7f747149a19983fecd0077d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6293840639497600553, guid: c47ef35ce7f747149a19983fecd0077d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -27510,7 +26840,6 @@ GameObject:
   - component: {fileID: 1991251062}
   - component: {fileID: 1991251065}
   - component: {fileID: 1991251064}
-  - component: {fileID: 1991251063}
   m_Layer: 0
   m_Name: Quad (30)
   m_TagString: Untagged
@@ -27533,28 +26862,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 728269832}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &1991251063
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1991251061}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1991251064
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27922,7 +27229,6 @@ GameObject:
   - component: {fileID: 2043972478}
   - component: {fileID: 2043972481}
   - component: {fileID: 2043972480}
-  - component: {fileID: 2043972479}
   m_Layer: 0
   m_Name: Quad (33)
   m_TagString: Untagged
@@ -27945,28 +27251,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 728269832}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &2043972479
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2043972477}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &2043972480
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -28257,7 +27541,6 @@ GameObject:
   - component: {fileID: 2071830672}
   - component: {fileID: 2071830675}
   - component: {fileID: 2071830674}
-  - component: {fileID: 2071830673}
   m_Layer: 0
   m_Name: Quad (45)
   m_TagString: Untagged
@@ -28280,28 +27563,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 728269832}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &2071830673
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2071830671}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &2071830674
 MeshRenderer:
   m_ObjectHideFlags: 0

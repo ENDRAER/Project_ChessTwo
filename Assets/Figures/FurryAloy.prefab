@@ -28920,6 +28920,7 @@ MonoBehaviour:
   allActionsPF:
   - {fileID: 2554263937842028151, guid: 7b0e7e5a951cecc4c875ae28e54aa921, type: 3}
   createdActionButtons: []
+  m_figureScript: {fileID: 6543360106956474388}
   m_Canvas: {fileID: 2371945553233876457}
 --- !u!1 &6527832381758590258
 GameObject:
