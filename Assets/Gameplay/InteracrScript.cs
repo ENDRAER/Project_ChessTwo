@@ -8,4 +8,14 @@ public class InteracrScript : MonoBehaviour
     {
 
     }
+
+    public virtual void CustomActionCursourBehaviour(Transform target, Transform previousTarget)
+    {
+
+    }
+
+    public virtual InteracrScript CustomActionInteractionBehaviour(Transform target)
+    {
+        return null;
+    }
 }

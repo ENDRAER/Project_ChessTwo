@@ -1,3 +1,4 @@
+using Mirror;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -44,6 +45,7 @@ public class ActionMenu : MonoBehaviour
 
     void Update()
     {
-        m_Canvas.transform.LookAt(-CameraGO.transform.position + m_Canvas.transform.position);
+        Vector3 v3 = CameraGO.transform.position;
+        m_Canvas.transform.LookAt(v3);
     }
 }

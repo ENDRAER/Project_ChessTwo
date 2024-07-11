@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Interactable
   - Hexagon
+  - ActionButton
   layers:
   - Default
   - TransparentFX

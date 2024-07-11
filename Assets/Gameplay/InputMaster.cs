@@ -1,3 +1,4 @@
+using Mirror.Examples.MultipleMatch;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -47,12 +48,25 @@ public class InputMaster : MonoBehaviour
     public void StartInteracting(InputAction.CallbackContext cbContext)
     {
         Physics.Raycast(Camera.ScreenPointToRay(Input.mousePosition), out RaycastHit hit, 50);
-        if (hit.transform != null && hit.transform.gameObject.layer == 3)
+        Transform hitedTranform = hit.transform == null ? transform : hit.transform;
+        if (hitedTranform != null && hitedTranform.gameObject.layer == 3 && _matchController.selectedAction == null)
         {
-            if(_matchController.selectedAction == null && hit.transform.tag != "Hexagon")
-                hit.transform.GetComponent<InteracrScript>().Interacting();
-            else if(_matchController.selectedAction != null)
-                _matchController.selectedAction.CustomActionInteractionBehaviour(hit.transform);
+            if (_matchController.selectedAction == null && hitedTranform.tag != "Hexagon")
+            {
+                hitedTranform.GetComponent<InteracrScript>().Interacting();
+                _matchController.selectedAction = hitedTranform.GetComponent<InteracrScript>();
+            }
+        }
+        else if (_matchController.selectedAction != null)
+        {
+            InteracrScript returnedInteracrScript = _matchController.selectedAction.CustomActionInteractionBehaviour(hitedTranform);
+            if (returnedInteracrScript == null)
+                _matchController.selectedAction = null; 
+            else if (_matchController.selectedAction != returnedInteracrScript)
+            {
+                returnedInteracrScript.Interacting();
+                _matchController.selectedAction = returnedInteracrScript;
+            }
         }
     }
 }

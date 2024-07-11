@@ -1,4 +1,5 @@
 using DG.Tweening;
+using Mirror.Examples.MultipleMatch;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,10 +15,24 @@ public class FigureScript : InteracrScript
 
     public override void Interacting()
     {
-        if(actionMenuGO.transform.localScale.x == 0)
-            actionMenuGO.transform.DOScale(Vector3.one, 0.1f);
-        if (actionMenuGO.transform.localScale.x == 1)
+        actionMenuGO.transform.DOScale(Vector3.one, 0.1f);
+    }
+
+    public override void CustomActionCursourBehaviour(Transform target, Transform previousTarget)
+    {
+        
+    }
+
+    public override InteracrScript CustomActionInteractionBehaviour(Transform target)
+    {
+        if (target.tag == "ActionButton")
+        {
+            return target.GetComponent<InteracrScript>();
+        }
+        else
+        {
             actionMenuGO.transform.DOScale(Vector3.zero, 0.1f);
+            return null;
+        }
     }
 }
-//if you are reading I pretend to be actively working

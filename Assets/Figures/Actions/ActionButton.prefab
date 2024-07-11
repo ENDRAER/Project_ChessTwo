@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4983244747392180758}
   m_Layer: 3
   m_Name: ActionButton
-  m_TagString: Untagged
+  m_TagString: ActionButton
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -89,9 +89,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbe3f59df0b7f2a449906e786bfe3a29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_figureScript: {fileID: 0}
-  _hexagonGrid: {fileID: 0}
-  _matchController: {fileID: 0}
 --- !u!135 &4983244747392180758
 SphereCollider:
   m_ObjectHideFlags: 0

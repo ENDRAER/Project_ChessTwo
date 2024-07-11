@@ -7,10 +7,8 @@ public class MatchController : MonoBehaviour
 {
     [NonSerialized] public static MatchController StaticMatchController;
 
-    [SerializeField] public enum States {defaultState, spectator, cellChoisechising }
-    [NonSerialized] public States CurentState;
     [NonSerialized] public FigureScript[] FigureScripts;
-    [NonSerialized] public Action selectedAction;
+    [NonSerialized] public InteracrScript selectedAction;
 
     private void Awake()
     {

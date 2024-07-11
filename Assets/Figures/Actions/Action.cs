@@ -4,31 +4,11 @@ using UnityEngine;
 
 public class Action : InteracrScript
 {
-    [SerializeField] protected FigureScript m_figureScript;
-    [SerializeField] protected HexagonGrid _hexagonGrid;
-    [SerializeField] protected MatchController _matchController;
+    [NonReorderable] protected FigureScript m_figureScript;
 
     private void Start()
     {
-        _hexagonGrid = HexagonGrid.StaticHexagonGrid;
-        _matchController = MatchController.StaticMatchController;
         m_figureScript = transform.GetComponentInParent<FigureScript>();
-    }
-
-    public override void Interacting()
-    {
-
-    }
-
-    // CustomBehaviour
-    public virtual void CustomActionCursourBehaviour(Transform target, Transform previousTarget)
-    {
-
-    }
-
-    public virtual void CustomActionInteractionBehaviour(Transform target)
-    {
-
     }
 
     public virtual void ActingOnTact()

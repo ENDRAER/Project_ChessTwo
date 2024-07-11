@@ -3,7 +3,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEngine.GraphicsBuffer;
 
 public class Action_RunTo : Action
 {
@@ -13,8 +12,6 @@ public class Action_RunTo : Action
     public override void Interacting()
     {
         m_figureScript.actionMenuGO.transform.DOScale(Vector3.zero, 0.1f);
-        _matchController.selectedAction = this;
-        _matchController.CurentState = MatchController.States.cellChoisechising;
         m_figureScript.pointerGO.SetActive(true);
 
         pointerMeshRenderers[0] = m_figureScript.pointerGO.GetComponent<MeshRenderer>();
@@ -57,32 +54,36 @@ public class Action_RunTo : Action
         }
     }
 
-    public override void CustomActionInteractionBehaviour(Transform target)
+    public override InteracrScript CustomActionInteractionBehaviour(Transform target)
     {
-        if (target.tag != "Hexagon")
-            return;
-        float distanceFromCell = Vector3.Distance(target.transform.position, transform.parent.parent.parent.position);
-        if (distanceFromCell < maxTravelDistance && distanceFromCell >= 0.8f)
+        if (target.tag == "Hexagon")
         {
-            m_figureScript.FigureModel.transform.DOLookAt(target.position, 0.3f, AxisConstraint.Y);
-            m_figureScript.selectedAction = this;
-            _matchController.selectedAction = null;
-            highlightCells(false);
+            float distanceFromCell = Vector3.Distance(target.transform.position, transform.parent.parent.parent.position);
+            if (distanceFromCell < maxTravelDistance && distanceFromCell >= 0.8f)
+            {
+                m_figureScript.FigureModel.transform.DOLookAt(target.position, 0.3f, AxisConstraint.Y);
+                m_figureScript.selectedAction = this;
+                highlightCells(false);
+                return null;
+            }
+            else
+            {
+                pointerMeshRenderers[0].material.color = new Color(0.85f, 0, 0);
+                pointerMeshRenderers[0].material.DOColor(new Color(0.85f, 0, 0), 0.2f).OnComplete(() =>
+                {
+                    pointerMeshRenderers[0].material.DOColor(new Color(0.85f, 0.85f, 0.85f), 0.5f);
+                });
+
+                pointerMeshRenderers[1].material.color = new Color(0.85f, 0, 0);
+                pointerMeshRenderers[1].material.DOColor(new Color(0.85f, 0, 0), 0.2f).OnComplete(() =>
+                {
+                    pointerMeshRenderers[1].material.DOColor(new Color(0.85f, 0.85f, 0.85f), 0.5f);
+                });
+                return this;
+            }
         }
         else
-        {
-            pointerMeshRenderers[0].material.color = new Color(0.85f, 0, 0);
-            pointerMeshRenderers[0].material.DOColor(new Color(0.85f, 0, 0), 0.2f).OnComplete(() =>
-            {
-                pointerMeshRenderers[0].material.DOColor(new Color(0.85f, 0.85f, 0.85f), 0.5f);
-            });
-
-            pointerMeshRenderers[1].material.color = new Color(0.85f, 0, 0);
-            pointerMeshRenderers[1].material.DOColor(new Color(0.85f, 0, 0), 0.2f).OnComplete(() =>
-            {
-                pointerMeshRenderers[1].material.DOColor(new Color(0.85f, 0.85f, 0.85f), 0.5f);
-            });
-        }
+            return this;
     }
 
     public override void ActingOnTact()
