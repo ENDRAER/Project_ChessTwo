@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class InteracrScript : MonoBehaviour
 {
+    [SerializeField] public bool customBehaviour;
+
     public virtual void Interacting()
     {
 

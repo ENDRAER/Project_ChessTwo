@@ -1,7 +1,5 @@
 using DG.Tweening;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Action_RunTo : Action
@@ -86,8 +84,8 @@ public class Action_RunTo : Action
             return this;
     }
 
-    public override void ActingOnTact()
+    public override void StartAction()
     {
-
+        print("BOOB");
     }
 }

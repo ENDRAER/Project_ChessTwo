@@ -13,7 +13,6 @@ public class ActionMenu : MonoBehaviour
     [NonSerialized] private GameObject CameraGO;
     [NonSerialized] private float roundingOfActionButtons = 6;
     [NonSerialized] private float spacingOfActionButtons = 70;
-    Vector3 ass = Vector3.one;
 
 
     private void Start()

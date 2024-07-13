@@ -11,9 +11,8 @@ public class Action : InteracrScript
         m_figureScript = transform.GetComponentInParent<FigureScript>();
     }
 
-    public virtual void ActingOnTact()
+    public virtual void StartAction()
     {
 
     }
 }
-// do not read this pls

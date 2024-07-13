@@ -7,7 +7,7 @@ public class MatchController : MonoBehaviour
 {
     [NonSerialized] public static MatchController StaticMatchController;
 
-    [NonSerialized] public FigureScript[] FigureScripts;
+    [NonSerialized] public List<FigureScript> FigureScripts = new List<FigureScript>();
     [NonSerialized] public InteracrScript selectedAction;
 
     private void Awake()
@@ -17,9 +17,13 @@ public class MatchController : MonoBehaviour
 
     public void StartNextTact()
     {
-        foreach (var figure in FigureScripts)
+        foreach (FigureScript figure in FigureScripts)
         {
-            figure.selectedAction.ActingOnTact();
+            if (figure.selectedAction != null)
+            {
+                figure.selectedAction.StartAction();
+                figure.selectedAction = null;
+            }
         }
     }
 }

@@ -1,8 +1,5 @@
 using DG.Tweening;
-using Mirror.Examples.MultipleMatch;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FigureScript : InteracrScript
@@ -34,5 +31,10 @@ public class FigureScript : InteracrScript
             actionMenuGO.transform.DOScale(Vector3.zero, 0.1f);
             return null;
         }
+    }
+
+    private void Start()
+    {
+        MatchController.StaticMatchController.FigureScripts.Add(this);
     }
 }
