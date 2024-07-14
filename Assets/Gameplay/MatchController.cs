@@ -8,7 +8,7 @@ public class MatchController : MonoBehaviour
     [NonSerialized] public static MatchController StaticMatchController;
 
     [NonSerialized] public List<FigureScript> FigureScripts = new List<FigureScript>();
-    [NonSerialized] public InteracrScript selectedAction;
+    [NonSerialized] public InteractScript selectedAction;
 
     private void Awake()
     {
@@ -22,6 +22,7 @@ public class MatchController : MonoBehaviour
             if (figure.selectedAction != null)
             {
                 figure.selectedAction.StartAction();
+                figure.selectedAction.DisableAction();
                 figure.selectedAction = null;
             }
         }

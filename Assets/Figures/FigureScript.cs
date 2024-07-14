@@ -2,17 +2,21 @@ using DG.Tweening;
 using System;
 using UnityEngine;
 
-public class FigureScript : InteracrScript
+public class FigureScript : InteractScript
 {
     [SerializeField] public GameObject FigureModel;
     [SerializeField] public GameObject actionMenuGO;
+    [SerializeField] public GameObject cancelActionGO;
     [SerializeField] public GameObject pointerGO;
     [NonSerialized] public Action selectedAction;
 
 
     public override void Interacting()
     {
-        actionMenuGO.transform.DOScale(Vector3.one, 0.1f);
+        if(selectedAction == null)
+            actionMenuGO.transform.DOScale(Vector3.one, 0.1f);
+        else
+            cancelActionGO.transform.DOScale(Vector3.one, 0.1f);
     }
 
     public override void CustomActionCursourBehaviour(Transform target, Transform previousTarget)
@@ -20,17 +24,14 @@ public class FigureScript : InteracrScript
         
     }
 
-    public override InteracrScript CustomActionInteractionBehaviour(Transform target)
+    public override InteractScript CustomActionInteractionBehaviour(Transform target)
     {
+        actionMenuGO.transform.DOScale(Vector3.zero, 0.1f);
+        cancelActionGO.transform.DOScale(Vector3.zero, 0.1f);
         if (target.tag == "ActionButton")
-        {
-            return target.GetComponent<InteracrScript>();
-        }
+            return target.GetComponent<InteractScript>();
         else
-        {
-            actionMenuGO.transform.DOScale(Vector3.zero, 0.1f);
             return null;
-        }
     }
 
     private void Start()

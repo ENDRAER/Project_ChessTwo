@@ -48,19 +48,22 @@ public class InputMaster : MonoBehaviour
         Transform hitedTranform = hit.transform == null ? transform : hit.transform;
         if (hitedTranform != null && hitedTranform.gameObject.layer == 3 && _matchController.selectedAction == null && hitedTranform.tag != "Hexagon")
         {
-            hitedTranform.GetComponent<InteracrScript>().Interacting();
-            if(hitedTranform.GetComponent<InteracrScript>().customBehaviour)
-                _matchController.selectedAction = hitedTranform.GetComponent<InteracrScript>();
+            hitedTranform.GetComponent<InteractScript>().Interacting();
+            if(hitedTranform.GetComponent<InteractScript>().customBehaviour)
+                _matchController.selectedAction = hitedTranform.GetComponent<InteractScript>();
         }
         else if (_matchController.selectedAction != null)
         {
-            InteracrScript returnedInteracrScript = _matchController.selectedAction.CustomActionInteractionBehaviour(hitedTranform);
-            if (returnedInteracrScript == null)
+            InteractScript returnedInteractScript = _matchController.selectedAction.CustomActionInteractionBehaviour(hitedTranform);
+            if (returnedInteractScript == null)
                 _matchController.selectedAction = null; 
-            else if (_matchController.selectedAction != returnedInteracrScript)
+            else if (_matchController.selectedAction != returnedInteractScript)
             {
-                returnedInteracrScript.Interacting();
-                _matchController.selectedAction = returnedInteracrScript;
+                returnedInteractScript.Interacting();
+                if (!returnedInteractScript.customBehaviour)
+                    _matchController.selectedAction = null;
+                else
+                    _matchController.selectedAction = returnedInteractScript;
             }
         }
     }

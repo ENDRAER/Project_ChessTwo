@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Action : InteracrScript
+public class Action : InteractScript
 {
     [NonReorderable] protected FigureScript m_figureScript;
 
@@ -13,6 +13,11 @@ public class Action : InteracrScript
 
     public virtual void StartAction()
     {
+        Debug.LogError("There's no Acting script");
+    }
 
+    public virtual void DisableAction()
+    {
+        Debug.LogError("There's no Disable script");
     }
 }

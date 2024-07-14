@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class InteracrScript : MonoBehaviour
+public class InteractScript : MonoBehaviour
 {
     [SerializeField] public bool customBehaviour;
 
@@ -16,7 +16,7 @@ public class InteracrScript : MonoBehaviour
 
     }
 
-    public virtual InteracrScript CustomActionInteractionBehaviour(Transform target)
+    public virtual InteractScript CustomActionInteractionBehaviour(Transform target)
     {
         return null;
     }

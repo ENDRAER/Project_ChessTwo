@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StartNextTact : InteracrScript
+public class StartNextTact : InteractScript
 {
     [SerializeField] private MatchController _matchController; 
 

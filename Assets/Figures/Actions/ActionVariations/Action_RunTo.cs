@@ -9,8 +9,8 @@ public class Action_RunTo : Action
 
     public override void Interacting()
     {
-        m_figureScript.actionMenuGO.transform.DOScale(Vector3.zero, 0.1f);
         m_figureScript.pointerGO.SetActive(true);
+        m_figureScript.selectedAction = this;
 
         pointerMeshRenderers[0] = m_figureScript.pointerGO.GetComponent<MeshRenderer>();
         pointerMeshRenderers[1] = m_figureScript.pointerGO.transform.GetChild(0).GetComponent<MeshRenderer>();
@@ -52,7 +52,7 @@ public class Action_RunTo : Action
         }
     }
 
-    public override InteracrScript CustomActionInteractionBehaviour(Transform target)
+    public override InteractScript CustomActionInteractionBehaviour(Transform target)
     {
         if (target.tag == "Hexagon")
         {
@@ -60,7 +60,6 @@ public class Action_RunTo : Action
             if (distanceFromCell < maxTravelDistance && distanceFromCell >= 0.8f)
             {
                 m_figureScript.FigureModel.transform.DOLookAt(target.position, 0.3f, AxisConstraint.Y);
-                m_figureScript.selectedAction = this;
                 highlightCells(false);
                 return null;
             }
@@ -87,5 +86,13 @@ public class Action_RunTo : Action
     public override void StartAction()
     {
         print("BOOB");
+    }
+
+    public override void DisableAction()
+    {
+        m_figureScript.actionMenuGO.transform.DOScale(Vector3.zero, 0.1f);
+        m_figureScript.cancelActionGO.transform.DOScale(Vector3.zero, 0.1f);
+        m_figureScript.pointerGO.SetActive(false);
+        m_figureScript.selectedAction = null;
     }
 }
