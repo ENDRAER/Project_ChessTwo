@@ -1,11 +1,13 @@
 using DG.Tweening;
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class Action_RunTo : Action
 {
-    [NonSerialized] private float maxTravelDistance = 1.7f;
+    [NonSerialized] private float maxTravelDistance = 901.7f;
     [NonSerialized] private MeshRenderer[] pointerMeshRenderers = new MeshRenderer[3]; // 0 - buttom thing 1 - conus 2 - shadow
+    [NonSerialized] public float MovingSpeed = 0.005f;
 
     public override void Interacting()
     {
@@ -42,7 +44,7 @@ public class Action_RunTo : Action
     {
         if (target.tag == "Hexagon")
         {
-            float distanceFromCell = Vector3.Distance(target.transform.position, transform.parent.parent.parent.position);
+            float distanceFromCell = Vector3.Distance(target.transform.position, m_figureScript.transform.position);
             if (distanceFromCell < maxTravelDistance && distanceFromCell >= 0.8f)
                 pointerMeshRenderers[2].material.color = new Color(0.1f, 0.5f, 0.1f, pointerMeshRenderers[2].material.color.a);
             else
@@ -85,7 +87,20 @@ public class Action_RunTo : Action
 
     public override void StartAction()
     {
-        print("BOOB");
+        StartCoroutine(TransleteToDirection());
+    }
+
+    private IEnumerator TransleteToDirection()
+    {
+        Transform m_figureTransform = m_figureScript.transform;
+        Transform m_pointerTransform = pointerMeshRenderers[0].transform;
+        Vector3 directiom = m_figureTransform.position - m_pointerTransform.position;
+        while (Vector3.Distance(m_figureTransform.position, m_pointerTransform.position) > 1.2)
+        {
+            float modifer = Vector3.Distance(m_figureTransform.position, m_pointerTransform.position) / 5;
+            m_figureTransform.position -= directiom * (MovingSpeed * (modifer < 1 ? modifer : 1));
+            yield return new WaitForEndOfFrame();
+        }
     }
 
     public override void DisableAction()
