@@ -22,7 +22,6 @@ public class MatchController : MonoBehaviour
             if (figure.selectedAction != null)
             {
                 figure.selectedAction.StartAction();
-                figure.selectedAction.DisableAction();
                 figure.selectedAction = null;
             }
         }

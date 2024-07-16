@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class FigureScript : InteractScript
 {
+    [SerializeField] public MeshRenderer[] pointerMeshRenderers = new MeshRenderer[3]; // 0 - buttom thing : 1 - conus : 2 - shadow
+    [SerializeField] public GameObject pointerGO;
     [SerializeField] public GameObject FigureModel;
     [SerializeField] public GameObject actionMenuGO;
     [SerializeField] public GameObject cancelActionGO;
-    [SerializeField] public GameObject pointerGO;
     [NonSerialized] public Action selectedAction;
 
 

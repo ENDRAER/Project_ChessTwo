@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class StartNextTact : InteractScript
 {
-    [SerializeField] private MatchController _matchController; 
+    [SerializeField] private MatchController _matchController;
 
     public override void Interacting()
     {

@@ -14,7 +14,7 @@ public class CameraMoving : MonoBehaviour
     [NonSerialized] private float backwardForceSensitivity = 60f;
     // impulse
     [NonSerialized] private float impulseDeadZone = 0.1f;
-    [NonSerialized] private float impulseSmoothnes = 80f; // increase value to reduce resistance
+    [NonSerialized] private float impulseSmoothnes = 300f; // increase value to reduce resistance
 
     [NonSerialized] private Vector2 lastCursourVelocity;
 
