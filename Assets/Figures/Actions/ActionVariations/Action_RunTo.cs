@@ -7,6 +7,7 @@ public class Action_RunTo : Action
 {
     [NonSerialized] private float maxTravelDistance = 901.7f;
     [NonSerialized] public float MovingSpeed = 0.01f;
+    [NonSerialized] public float jumpHeigh = 2;
 
     public override void Interacting()
     {
@@ -89,16 +90,24 @@ public class Action_RunTo : Action
         Transform m_figureTransform = m_figureScript.transform;
         Vector3 firstFigurePos = m_figureTransform.position;
         Vector3 lastPointerPos = m_figureScript.pointerGO.transform.position;
+        float firstDistance = Vector3.Distance(firstFigurePos, lastPointerPos);
         float distance = 100;
+        float distanceTraveled = 1f / firstDistance * distance;
         Vector3 directiom = (m_figureTransform.position - lastPointerPos).normalized;
+
 
         while (distance >= MovingSpeed)
         {
             distance = Vector3.Distance(new Vector3(m_figureTransform.position.x, 0 , m_figureTransform.position.z), new Vector3(lastPointerPos.x, 0, lastPointerPos.z));
             m_figureTransform.position -= MovingSpeed * directiom;
+
+            print((1 - (1f / (firstDistance * 0.666f) * (firstDistance - distance))));
+            if (1 - (1f / firstDistance * distance) < 0.666f)
+                m_figureTransform.position = new Vector3(m_figureTransform.position.x, -jumpHeigh / (1 - (1f / (firstDistance * 0.666f) * (firstDistance - distance))), m_figureTransform.position.z);
+            else
+                m_figureTransform.position = new Vector3(m_figureTransform.position.x, 0, m_figureTransform.position.z);
+
             m_figureScript.pointerGO.transform.position = lastPointerPos;
-            //m_figureTransform.position += new Vector3(0, Vector3.Distance(firstFigurePos, lastPointerPos) / 100 * Vector3.Distance(m_figureTransform.position, lastPointerPos), 0);
-            print(100 / Vector3.Distance(firstFigurePos, lastPointerPos) * Vector3.Distance(m_figureTransform.position, lastPointerPos));
             yield return new WaitForFixedUpdate();
         }
         m_figureTransform.position = lastPointerPos;

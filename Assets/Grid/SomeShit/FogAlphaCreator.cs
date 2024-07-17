@@ -1,6 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class FogAlphaCreator : MonoBehaviour
@@ -13,7 +10,7 @@ public class FogAlphaCreator : MonoBehaviour
         float i = 0;
         foreach (Transform tr in transform)
         {
-            tr.position = new Vector3(UnityEngine.Random.Range(-0.3f,0.3f), i, UnityEngine.Random.Range(-0.3f, 0.3f));
+            tr.position = new Vector3(0, i, 0);
             i -= interval;
 
             a -= 1f / (transform.childCount - 1);
