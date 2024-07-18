@@ -285,7 +285,7 @@ GameObject:
   - component: {fileID: 148198401171373588}
   m_Layer: 3
   m_Name: FurryAloy
-  m_TagString: Untagged
+  m_TagString: Figure
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -329,6 +329,10 @@ MonoBehaviour:
   FigureModel: {fileID: 2193515301578217491}
   actionMenuGO: {fileID: 3477855699344731081}
   cancelActionGO: {fileID: 8113395689093420086}
+  allActionsPF:
+  - {fileID: 2554263937842028151, guid: 7b0e7e5a951cecc4c875ae28e54aa921, type: 3}
+  - {fileID: 2554263937842028151, guid: ffb8165f3ab29f84995d77cc8858c5c1, type: 3}
+  health: 100
 --- !u!114 &9133305767194021094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -418,9 +422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e17ff1fbec1893f4d83959ad7fd06b20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allActionsPF:
-  - {fileID: 2554263937842028151, guid: 7b0e7e5a951cecc4c875ae28e54aa921, type: 3}
-  createdActionButtons: []
+  m_figureScript: {fileID: 6543360106956474388}
   m_Canvas: {fileID: 2371945553233876457}
 --- !u!1 &6470966585416094413
 GameObject:

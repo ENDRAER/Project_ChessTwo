@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class ActionMenu : MonoBehaviour
 {
-    [SerializeField] private List<GameObject> allActionsPF = new List<GameObject>();
-    [SerializeField] private List<GameObject> createdActionButtons = new List<GameObject>();
+    [SerializeField] protected FigureScript m_figureScript;
     [SerializeField] private GameObject m_Canvas;
+    [NonSerialized] private List<GameObject> createdActionButtons = new List<GameObject>();
     [NonSerialized] private GameObject CameraGO;
     [NonSerialized] private float roundingOfActionButtons = 6;
     [NonSerialized] private float spacingOfActionButtons = 70;
@@ -20,11 +20,14 @@ public class ActionMenu : MonoBehaviour
 
     public void ButtonSpawner()
     {
-        GameObject createdButton = Instantiate(allActionsPF[0]);
-        createdButton.transform.SetParent(transform);
-        createdButton.transform.localEulerAngles = Vector3.zero;
-        createdButton.transform.localScale = Vector3.one;
-        createdActionButtons.Add(createdButton);
+        foreach (GameObject action in m_figureScript.allActionsPF)
+        {
+            GameObject createdButton = Instantiate(action);
+            createdButton.transform.SetParent(transform);
+            createdButton.transform.localEulerAngles = Vector3.zero;
+            createdButton.transform.localScale = Vector3.one;
+            createdActionButtons.Add(createdButton);
+        }
         ActionButtonsPositing();
     }
 

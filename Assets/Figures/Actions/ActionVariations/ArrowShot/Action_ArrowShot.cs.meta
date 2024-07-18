@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 5afafa7e872dfce49a520147e857d262
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - ArrowPF: {fileID: 9047646900565460730, guid: 54ea8cf926e1b8b448670974689b6f2c, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

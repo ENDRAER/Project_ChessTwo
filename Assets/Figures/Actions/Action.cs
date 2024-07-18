@@ -1,10 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Action : InteractScript
 {
-    [NonReorderable] protected FigureScript m_figureScript;
+    [NonSerialized] protected FigureScript m_figureScript;
 
     private void Start()
     {

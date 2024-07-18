@@ -5,9 +5,9 @@ using UnityEngine;
 
 public class Action_RunTo : Action
 {
-    [NonSerialized] private float maxTravelDistance = 901.7f;
-    [NonSerialized] public float MovingSpeed = 0.01f;
-    [NonSerialized] public float jumpHeigh = 2;
+    [NonSerialized] private float maxTravelDistance = 1.7f;
+    [NonSerialized] public float MovingSpeed = 0.03f;
+    [NonSerialized] public float jumpHeigh = 0.5f;
 
     public override void Interacting()
     {
@@ -92,20 +92,20 @@ public class Action_RunTo : Action
         Vector3 lastPointerPos = m_figureScript.pointerGO.transform.position;
         float firstDistance = Vector3.Distance(firstFigurePos, lastPointerPos);
         float distance = 100;
-        float distanceTraveled = 1f / firstDistance * distance;
         Vector3 directiom = (m_figureTransform.position - lastPointerPos).normalized;
-
+        Vector3 previousLinearPosition = m_figureTransform.position;
 
         while (distance >= MovingSpeed)
         {
+            m_figureTransform.position = previousLinearPosition;
             distance = Vector3.Distance(new Vector3(m_figureTransform.position.x, 0 , m_figureTransform.position.z), new Vector3(lastPointerPos.x, 0, lastPointerPos.z));
             m_figureTransform.position -= MovingSpeed * directiom;
+            previousLinearPosition = m_figureTransform.position;
 
-            print((1 - (1f / (firstDistance * 0.666f) * (firstDistance - distance))));
-            if (1 - (1f / firstDistance * distance) < 0.666f)
-                m_figureTransform.position = new Vector3(m_figureTransform.position.x, -jumpHeigh / (1 - (1f / (firstDistance * 0.666f) * (firstDistance - distance))), m_figureTransform.position.z);
+            if (1 - (1f / firstDistance * distance) < 0.7f)
+                m_figureTransform.position += new Vector3(0, (float)Math.Sin(1f / (firstDistance * 0.7f) * (firstDistance - distance) * 90 * (Math.PI / 180f)) * jumpHeigh, 0);
             else
-                m_figureTransform.position = new Vector3(m_figureTransform.position.x, 0, m_figureTransform.position.z);
+                m_figureTransform.position += new Vector3(0, (float)Math.Cos(1f / (firstDistance * 0.3f) * (firstDistance - distance - firstDistance * 0.7f) * 90 * (Math.PI / 180f)) * jumpHeigh, 0);
 
             m_figureScript.pointerGO.transform.position = lastPointerPos;
             yield return new WaitForFixedUpdate();
