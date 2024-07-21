@@ -56,7 +56,6 @@ public class Action_RunTo : Action
             float distanceFromCell = Vector3.Distance(target.transform.position, transform.parent.parent.parent.position);
             if (distanceFromCell < maxTravelDistance && distanceFromCell >= 0.8f)
             {
-                m_figureScript.FigureModel.transform.DOLookAt(target.position, 0.3f, AxisConstraint.Y);
                 highlightCells(false);
                 return null;
             }
