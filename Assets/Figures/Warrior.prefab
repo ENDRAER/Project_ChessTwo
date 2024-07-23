@@ -57,9 +57,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6543360106956474388, guid: c47ef35ce7f747149a19983fecd0077d, type: 3}
-      propertyPath: allActionsPF.Array.size
-      value: 1
+      propertyPath: health
+      value: 250
       objectReference: {fileID: 0}
+    - target: {fileID: 6543360106956474388, guid: c47ef35ce7f747149a19983fecd0077d, type: 3}
+      propertyPath: allActionsPF.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543360106956474388, guid: c47ef35ce7f747149a19983fecd0077d, type: 3}
+      propertyPath: allActionsPF.Array.data[1]
+      value: 
+      objectReference: {fileID: 2554263937842028151, guid: e538670bee4e4814cb2970a46aaba2a6, type: 3}
     - target: {fileID: 9097189899692151206, guid: c47ef35ce7f747149a19983fecd0077d, type: 3}
       propertyPath: m_Mesh
       value: 

@@ -57,6 +57,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6543360106956474388, guid: c47ef35ce7f747149a19983fecd0077d, type: 3}
+      propertyPath: health
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 6543360106956474388, guid: c47ef35ce7f747149a19983fecd0077d, type: 3}
       propertyPath: allActionsPF.Array.size
       value: 1
       objectReference: {fileID: 0}
