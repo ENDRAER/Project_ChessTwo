@@ -56,7 +56,6 @@ public class Action_ArrowShot : Action
             float distanceFromCell = Vector3.Distance(target.transform.position, transform.parent.parent.parent.position);
             if (distanceFromCell < maxShotDistance && distanceFromCell >= 0.8f)
             {
-                m_figureScript.FigureModel.transform.DOLookAt(target.position, 0.3f, AxisConstraint.Y);
                 highlightCells(false);
                 return null;
             }
@@ -80,7 +79,7 @@ public class Action_ArrowShot : Action
             return this;
     }
 
-    public override void StartAction()
+    public override void CustomAction()
     {
         Rigidbody ArrowRB = Instantiate(ArrowPF, new Vector3(m_figureScript.transform.position.x, m_figureScript.transform.position.y + 0.5f, m_figureScript.transform.position.z), Quaternion.identity).GetComponent<Rigidbody>();
         Vector3 pointerPos = m_figureScript.pointerGO.transform.position;

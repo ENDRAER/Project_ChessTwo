@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,7 +13,12 @@ public class Action : InteractScript
         m_figureScript = transform.GetComponentInParent<FigureScript>();
     }
 
-    public virtual void StartAction()
+    public void StartAction()
+    {
+        m_figureScript.FigureModel.transform.DOLookAt(m_figureScript.pointerGO.transform.position, 0.3f, AxisConstraint.Y).OnComplete(()=>CustomAction());
+    }
+
+    public virtual void CustomAction()
     {
         Debug.LogError("There's no Acting script");
     }

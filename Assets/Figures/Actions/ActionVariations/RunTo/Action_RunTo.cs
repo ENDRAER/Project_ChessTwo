@@ -79,7 +79,7 @@ public class Action_RunTo : Action
             return this;
     }
 
-    public override void StartAction()
+    public override void CustomAction()
     {
         StartCoroutine(TransleteToDirection());
     }
